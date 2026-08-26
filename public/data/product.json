@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "name": "Wild Harvest Chicken Feast",
+    "category": "Cat & Dog Food",
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=900&q=85",
+    "description": "Nourishing chicken recipe made with wholesome ingredients for everyday vitality.",
+    "price": 2890
+  },
+  {
+    "id": 2,
+    "name": "Ocean Fresh Salmon Bites",
+    "category": "Cat & Dog Food",
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=85",
+    "description": "Protein-rich salmon bites crafted for happy tails and healthy appetites.",
+    "price": 3250
+  },
+  {
+    "id": 3,
+    "name": "Cloud Chaser Plush Toy",
+    "category": "Toys",
+    "image": "https://images.unsplash.com/photo-1549297161-14f79605a74c?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Soft, playful plush companion designed for gentle indoor adventures.",
+    "price": 1490
+  },
+  {
+    "id": 4,
+    "name": "Adventure Rope Toy",
+    "category": "Toys",
+    "image": "https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Durable braided rope for interactive play, tugging and daily enrichment.",
+    "price": 1190
+  },
+  {
+    "id": 5,
+    "name": "Silk Coat Grooming Brush",
+    "category": "Grooming Essentials",
+    "image": "https://images.unsplash.com/photo-1611173622933-91942d394b04?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Gentle grooming brush that helps keep coats smooth, clean and beautifully soft.",
+    "price": 1690
+  },
+  {
+    "id": 6,
+    "name": "Pure Paws Bath Set",
+    "category": "Grooming Essentials",
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=900&q=85",
+    "description": "A refined everyday grooming set for a fresh and comfortable pet.",
+    "price": 2490
+  },
+  {
+    "id": 7,
+    "name": "Cloud Nest Luxury Bed",
+    "category": "Bedding & Apparel",
+    "image": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=900&q=85",
+    "description": "Ultra-soft supportive bed designed for deep naps and peaceful evenings.",
+    "price": 5990
+  },
+  {
+    "id": 8,
+    "name": "Everyday Cozy Hoodie",
+    "category": "Bedding & Apparel",
+    "image": "https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=900&q=85",
+    "description": "A comfortable everyday layer with a clean premium silhouette.",
+    "price": 3490
+  },
+  {
+    "id": 9,
+    "name": "Daily Vitality Supplement",
+    "category": "Health Supplements",
+    "image": "https://images.unsplash.com/photo-1623099354893-9a1fbd0dbb3f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Daily nutritional support formulated to complement a balanced pet lifestyle.",
+    "price": 2790
+  },
+  {
+    "id": 10,
+    "name": "Omega Shine Formula",
+    "category": "Health Supplements",
+    "image": "https://images.unsplash.com/photo-1625154236234-ab1c8e908432?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "Omega-rich nutritional support for a healthy-looking coat and active lifestyle.",
+    "price": 3190
+  },
+  {
+    "id": 11,
+    "name": "Garden Crunch Treats",
+    "category": "Cat & Dog Food",
+    "image": "https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=900&q=85",
+    "description": "Crunchy wholesome treats made for rewarding good moments.",
+    "price": 990
+  },
+  {
+    "id": 12,
+    "name": "Velvet Paw Ball",
+    "category": "Toys",
+    "image": "https://images.unsplash.com/photo-1591946614720-90a587da4a36?auto=format&fit=crop&w=900&q=85",
+    "description": "Lightweight textured ball designed for exciting fetch and chase sessions.",
+    "price": 790
+  }
+]
+            

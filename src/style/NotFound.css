@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "1st";
+  src: url("../fonts/1st.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "1st Black";
+  src: url("../fonts/1st-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --nf-primary: #2b555b;
+  --nf-dark: #102f34;
+  --nf-soft: #edf5f4;
+  --nf-muted: #6e8588;
+}
+
+.nf-page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--nf-soft);
+  color: var(--nf-dark);
+}
+
+.nf-content {
+  width: min(90%, 900px);
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nf-number-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nf-404 {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  font-family: "1st Black", sans-serif;
+  font-size: clamp(9rem, 25vw, 20rem);
+  font-weight: 900;
+  line-height: 0.72;
+  letter-spacing: -0.09em;
+  color: var(--nf-primary);
+}
+
+.nf-circle {
+  width: clamp(120px, 16vw, 210px);
+  height: clamp(120px, 16vw, 210px);
+  position: absolute;
+  right: -18%;
+  top: -8%;
+  border: 1px solid rgba(43, 85, 91, 0.3);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.nf-circle::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 13%;
+  left: 13%;
+  border-radius: 50%;
+  background: var(--nf-primary);
+}
+
+.nf-title {
+  margin: 55px 0 16px;
+  font-family: "1st Black", sans-serif;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.nf-title span {
+  color: var(--nf-primary);
+}
+
+.nf-text {
+  max-width: 520px;
+  margin: 0;
+  font-family: "1st", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--nf-muted);
+}
+
+.nf-btn {
+  margin-top: 35px;
+  padding: 8px 8px 8px 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  border-radius: 100px;
+  background: var(--nf-primary);
+  color: #fff;
+  font-family: "1st", sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nf-btn:hover {
+  transform: translateY(-5px);
+  background: var(--nf-dark);
+  box-shadow: 0 20px 45px rgba(16, 47, 52, 0.2);
+}
+
+.nf-arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 1.15rem;
+  transition: transform 0.35s ease;
+}
+
+.nf-btn:hover .nf-arrow {
+  transform: rotate(45deg);
+}
+
+.nf-bg-circle {
+  position: absolute;
+  border: 1px solid rgba(43, 85, 91, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.nf-bg-circle-one {
+  width: 420px;
+  height: 420px;
+  left: -220px;
+  top: 10%;
+}
+
+.nf-bg-circle-two {
+  width: 560px;
+  height: 560px;
+  right: -300px;
+  bottom: -280px;
+}
+
+.nf-footer {
+  position: absolute;
+  z-index: 5;
+  left: 35px;
+  right: 35px;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "1st", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  color: #819699;
+}
+
+@media (max-width: 768px) {
+  .nf-404 {
+    font-size: clamp(7rem, 30vw, 13rem);
+  }
+
+  .nf-title {
+    margin-top: 45px;
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+  }
+
+  .nf-text {
+    max-width: 450px;
+    padding: 0 15px;
+    font-size: 0.92rem;
+  }
+
+  .nf-footer {
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nf-404 {
+    font-size: 7rem;
+  }
+
+  .nf-circle {
+    width: 100px;
+    height: 100px;
+    right: -22%;
+  }
+
+  .nf-title {
+    margin-top: 40px;
+    font-size: 2.1rem;
+  }
+
+  .nf-text {
+    font-size: 0.85rem;
+  }
+
+  .nf-btn {
+    margin-top: 28px;
+  }
+
+  .nf-footer {
+    font-size: 0.58rem;
+  }
+}

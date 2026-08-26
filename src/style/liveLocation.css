@@ -1,0 +1,167 @@
+.location-peek {
+  --location-width: 190px;
+
+  position: fixed;
+  top: 120px;
+  right: 0;
+
+  width: var(--location-width);
+
+  z-index: 9998;
+
+  transform: translateX(calc(100% - 18px));
+
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+
+  pointer-events: auto;
+}
+
+.location-peek:hover {
+  transform: translateX(0);
+}
+
+.location-peek-inner {
+  padding: 15px 18px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(43, 85, 91, 0.12);
+
+  border-right: none;
+
+  border-radius: 12px 0 0 12px;
+
+  box-shadow:
+    0 10px 35px rgba(43, 85, 91, 0.12);
+
+  backdrop-filter: blur(12px);
+}
+
+.location-time {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.location-live-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #19c37d;
+
+  box-shadow:
+    0 0 0 4px rgba(25, 195, 125, 0.12);
+
+  animation: locationPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes locationPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.45;
+    transform: scale(0.8);
+  }
+}
+
+.location-peek strong {
+  display: block;
+
+  color: #2b555b;
+
+  font-family: "1st", peridot-pe-variable;
+
+  font-size: 16px;
+
+  line-height: 1.1;
+
+  font-weight: 600;
+}
+
+.location-peek span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #748285;
+
+  font-family: "1st", peridot-pe-variable;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0.7;
+}
+
+.location-place {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-top: 11px;
+
+  border-top: 1px solid rgba(43, 85, 91, 0.1);
+}
+
+.location-place strong {
+  max-width: 135px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 12px;
+}
+
+.location-icon {
+  width: 27px;
+  height: 27px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(43, 85, 91, 0.08);
+
+  color: #2b555b;
+}
+
+.location-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 600px) {
+  .location-peek {
+    --location-width: 165px;
+    top: 75px;
+  }
+
+  .location-peek-inner {
+    padding: 13px 15px;
+  }
+
+  .location-place strong {
+    max-width: 110px;
+    font-size: 11px;
+  }
+}

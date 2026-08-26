@@ -1,0 +1,838 @@
+:root {
+  --teal: #2B555B;
+  --teal-dark: #193c41;
+  --teal-deep: #102f34;
+  --teal-light: #527b80;
+  --white: #ffffff;
+  --off-white: #f7faf9;
+  --text: #17373b;
+  --muted: #728689;
+  --border: rgba(43, 85, 91, 0.12);
+  --shadow: 0 25px 70px rgba(18, 55, 60, 0.12);
+}
+
+.veterinarian-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--off-white);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.veterinarian-hero {
+  position: relative;
+  width: 100%;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--teal-deep);
+}
+
+.veterinarian-hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.78) contrast(1.02) saturate(0.82);
+  transform: scale(1.02);
+}
+
+.veterinarian-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 47, 52, 0.83) 0%,
+      rgba(16, 47, 52, 0.68) 35%,
+      rgba(16, 47, 52, 0.42) 67%,
+      rgba(16, 47, 52, 0.64) 100%
+    );
+}
+
+.veterinarian-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      circle at 76% 42%,
+      rgba(255, 255, 255, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.06),
+      rgba(0, 0, 0, 0.18)
+    );
+  pointer-events: none;
+}
+
+.veterinarian-hero-content {
+  width: min(1400px, 88%);
+  margin: 0 auto;
+  padding: 110px 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.veterinarian-hero-left {
+  max-width: 690px;
+  color: var(--white);
+}
+
+.veterinarian-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 25px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.veterinarian-eyebrow::before {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.veterinarian-hero-left h1 {
+  margin: 0;
+  font-size: clamp(52px, 6.5vw, 92px);
+  line-height: 0.95;
+  letter-spacing: -5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.veterinarian-hero-left h1 em {
+  display: block;
+  margin-top: 9px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.72em;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -2px;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.veterinarian-hero-left p {
+  max-width: 520px;
+  margin: 30px 0 34px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.veterinarian-add-btn {
+  height: 60px;
+  min-width: 174px;
+  padding: 0 10px 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.veterinarian-add-btn span {
+  white-space: nowrap;
+}
+
+.veterinarian-add-btn b {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--teal);
+  font-size: 17px;
+  font-weight: 500;
+  transition: transform 0.4s ease;
+}
+
+.veterinarian-add-btn:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.veterinarian-add-btn:hover b {
+  transform: rotate(45deg);
+}
+
+.veterinarian-doctor-card {
+  position: relative;
+  width: 410px;
+  min-height: 310px;
+  padding: 30px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.105);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  transition:
+    transform 0.5s ease,
+    background 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.veterinarian-doctor-card:hover {
+  transform: translateY(-9px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+.doctor-card-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.doctor-card-line {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0 25px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.doctor-card-content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.doctor-card-image {
+  width: 120px;
+  height: 155px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.veterinarian-doctor-card:hover .doctor-card-image img {
+  transform: scale(1.07);
+}
+
+.doctor-card-info {
+  min-width: 0;
+}
+
+.doctor-card-info > span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.doctor-card-info h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  word-break: break-word;
+}
+
+.doctor-card-info p {
+  margin: 13px 0 11px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.doctor-card-info small {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 50px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.hero-bottom-info {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.veterinarian-profiles {
+  position: relative;
+  padding: 110px 0 120px;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(43, 85, 91, 0.08),
+      transparent 25%
+    ),
+    #f7faf9;
+}
+
+.profiles-heading {
+  width: min(1380px, 88%);
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.profiles-eyebrow {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--teal);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 3.5px;
+}
+
+.profiles-heading h2 {
+  margin: 0;
+  font-size: clamp(45px, 5vw, 70px);
+  line-height: 0.95;
+  letter-spacing: -3.5px;
+  color: var(--teal-dark);
+}
+
+.profiles-heading h2 em {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  color: var(--teal-light);
+}
+
+.profiles-heading > p {
+  max-width: 350px;
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.cards-container {
+  width: min(1380px, 88%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.card {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid rgba(43, 85, 91, 0.12);
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow:
+    0 20px 55px rgba(25, 60, 65, 0.08),
+    0 2px 8px rgba(25, 60, 65, 0.03);
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -90px;
+  bottom: -90px;
+  border-radius: 50%;
+  background: rgba(43, 85, 91, 0.07);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(43, 85, 91, 0.22);
+  box-shadow:
+    0 35px 80px rgba(25, 60, 65, 0.14),
+    0 10px 25px rgba(25, 60, 65, 0.06);
+}
+
+.card:hover::after {
+  transform: scale(2.2);
+}
+
+.card img {
+  width: 100%;
+  height: 265px;
+  display: block;
+  object-fit: cover;
+  transition:
+    transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.06) contrast(1.02);
+}
+
+.card h2 {
+  margin: 22px 24px 10px;
+  color: #12363b;
+  font-family: "1st", "Blacker sens light", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.card p {
+  width: auto;
+  margin: 7px 24px;
+  color: #6b7f81;
+  font-family: Peridot, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 22px 24px 24px;
+  position: relative;
+  z-index: 3;
+}
+
+.card-buttons button {
+  flex: 1;
+  height: 44px;
+  border: 1px solid #2b555b;
+  border-radius: 14px;
+  background: #2b555b;
+  color: #ffffff;
+  font-family: Peridot, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-buttons button:first-child {
+  background: #2b555b;
+  color: #ffffff;
+}
+
+.card-buttons button:last-child {
+  background: transparent;
+  color: #2b555b;
+}
+
+.card-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(43, 85, 91, 0.18);
+}
+
+.card-buttons button:first-child:hover {
+  background: #123f45;
+}
+
+.card-buttons button:last-child:hover {
+  background: #2b555b;
+  color: #ffffff;
+}
+
+.card-buttons button:active {
+  transform: scale(0.95);
+}
+
+
+/* Large Laptop */
+
+@media (max-width: 1200px) {
+  .cards-container {
+    width: 90%;
+    gap: 22px;
+  }
+
+  .card {
+    min-height: 410px;
+    border-radius: 26px;
+  }
+
+  .card img {
+    height: 235px;
+  }
+
+  .card h2 {
+    font-size: 25px;
+    margin: 20px 20px 8px;
+  }
+
+  .card p {
+    margin: 6px 20px;
+  }
+
+  .card-buttons {
+    margin: 20px;
+  }
+}
+
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .cards-container {
+    width: 90%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .card {
+    min-height: 400px;
+  }
+
+  .card img {
+    height: 230px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .card-buttons {
+    gap: 10px;
+  }
+}
+
+
+/* Small Tablet */
+
+@media (max-width: 768px) {
+  .cards-container {
+    width: 92%;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    min-height: 380px;
+    border-radius: 22px;
+  }
+
+  .card img {
+    height: 205px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+    margin: 17px 17px 8px;
+  }
+
+  .card p {
+    margin: 6px 17px;
+    font-size: 13px;
+  }
+
+  .card-buttons {
+    margin: 17px;
+    gap: 8px;
+  }
+
+  .card-buttons button {
+    height: 40px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .cards-container {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    min-height: auto;
+    border-radius: 24px;
+  }
+
+  .card img {
+    height: 250px;
+  }
+
+  .card h2 {
+    font-size: 26px;
+    margin: 20px 20px 9px;
+  }
+
+  .card p {
+    margin: 7px 20px;
+    font-size: 13px;
+  }
+
+  .card-buttons {
+    margin: 20px;
+    gap: 10px;
+  }
+
+  .card-buttons button {
+    height: 44px;
+    border-radius: 13px;
+    font-size: 12px;
+  }
+}
+
+
+/* Very Small Mobile */
+
+@media (max-width: 400px) {
+  .cards-container {
+    width: 92%;
+    gap: 16px;
+  }
+
+  .card {
+    border-radius: 20px;
+  }
+
+  .card img {
+    height: 210px;
+  }
+
+  .card h2 {
+    font-size: 23px;
+    margin: 17px 17px 8px;
+  }
+
+  .card p {
+    margin: 6px 17px;
+    font-size: 12px;
+  }
+
+  .card-buttons {
+    margin: 17px;
+    gap: 8px;
+  }
+
+  .card-buttons button {
+    height: 40px;
+    border-radius: 11px;
+    font-size: 11px;
+  }
+}
+
+
+/* Extra Small */
+
+@media (max-width: 320px) {
+  .cards-container {
+    width: 94%;
+  }
+
+  .card img {
+    height: 185px;
+  }
+
+  .card h2 {
+    font-size: 21px;
+  }
+
+  .card p {
+    font-size: 11px;
+  }
+
+  .card-buttons button {
+    height: 38px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .veterinarian-hero-content {
+    width: 90%;
+    gap: 45px;
+  }
+
+  .veterinarian-doctor-card {
+    width: 370px;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .veterinarian-hero {
+    min-height: 850px;
+  }
+
+  .veterinarian-hero-content {
+    padding: 90px 0 110px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .veterinarian-hero-left {
+    max-width: 650px;
+  }
+
+  .veterinarian-doctor-card {
+    width: min(430px, 100%);
+  }
+
+  .hero-bottom-info {
+    display: none;
+  }
+
+  .profiles-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .veterinarian-hero {
+    min-height: 900px;
+  }
+
+  .veterinarian-hero-content {
+    width: 88%;
+  }
+
+  .veterinarian-hero-left h1 {
+    font-size: 52px;
+    letter-spacing: -3px;
+  }
+
+  .veterinarian-hero-left h1 em {
+    font-size: 34px;
+  }
+
+  .veterinarian-hero-video {
+    object-position: center;
+    filter: brightness(0.72) saturate(0.8);
+  }
+
+  .veterinarian-hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(16, 47, 52, 0.75) 0%,
+        rgba(16, 47, 52, 0.65) 40%,
+        rgba(16, 47, 52, 0.86) 100%
+      );
+  }
+
+  .veterinarian-doctor-card {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .doctor-card-image {
+    width: 95px;
+    height: 125px;
+  }
+
+  .doctor-card-info h2 {
+    font-size: 25px;
+  }
+
+  .cards-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+  }
+
+  .veterinarian-profiles {
+    padding: 80px 0;
+  }
+
+  .profiles-heading h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 420px) {
+  .doctor-card-content {
+    gap: 17px;
+  }
+
+  .doctor-card-image {
+    width: 82px;
+    height: 110px;
+  }
+
+  .doctor-card-info h2 {
+    font-size: 21px;
+  }
+
+  .doctor-card-info p {
+    font-size: 15px;
+  }
+}

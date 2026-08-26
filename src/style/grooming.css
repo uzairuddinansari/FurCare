@@ -1,0 +1,312 @@
+.grooming-section{
+    height:100vh;
+    min-height:600px;
+    position:relative;
+    overflow:hidden;
+}
+
+.grooming-image{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.grooming-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(20,70,72,.55);
+}
+
+.grooming-box{
+    position:absolute;
+    bottom:-80px;
+    left:0;
+    width:100%;
+    height:70%;
+    background:#f7f5ef;
+    border-radius:50% 50% 0 0 / 20% 20% 0 0;
+}
+
+.content{
+    width:85%;
+    margin:auto;
+    padding-top:120px;
+    position:relative;
+    z-index:2;
+}
+
+.content span{
+    font-family: "1st" peridot-pe-variable, Arial, sans-serif;
+    letter-spacing:5px;
+    color:#2B555B;
+}
+
+h1{
+    font-family:"1st",Blacker sens light;
+    font-size:80px;
+    font-weight:300;
+    color:#12363b;
+}
+
+h1 i{
+    color:#3d7776;
+}
+
+p{
+    width:430px;
+     font-family: "1st" peridot-pe-variable, Arial, sans-serif;
+    line-height:1.8;
+}
+
+
+/* Large Desktop */
+@media (max-width:1400px){
+    .content{
+        width:88%;
+        padding-top:110px;
+    }
+
+    h1{
+        font-size:72px;
+    }
+
+    p{
+        width:410px;
+    }
+}
+
+
+/* Laptop */
+@media (max-width:1200px){
+    .grooming-section{
+        min-height:650px;
+    }
+
+    .grooming-box{
+        height:68%;
+        bottom:-70px;
+    }
+
+    .content{
+        width:88%;
+        padding-top:100px;
+    }
+
+    .content span{
+        font-size:14px;
+        letter-spacing:4px;
+    }
+
+    h1{
+        font-size:64px;
+        line-height:1.05;
+    }
+
+    p{
+        width:390px;
+        font-size:15px;
+    }
+}
+
+
+/* Tablet */
+@media (max-width:992px){
+    .grooming-section{
+        height:100vh;
+        min-height:620px;
+    }
+
+    .grooming-image{
+        background-attachment:scroll;
+        background-position:center;
+    }
+
+    .grooming-box{
+        height:65%;
+        bottom:-60px;
+        border-radius:50% 50% 0 0 / 15% 15% 0 0;
+    }
+
+    .content{
+        width:88%;
+        padding-top:90px;
+    }
+
+    .content span{
+        font-size:13px;
+        letter-spacing:3px;
+    }
+
+    h1{
+        font-size:56px;
+        line-height:1.05;
+        margin:20px 0;
+    }
+
+    p{
+        width:360px;
+        max-width:100%;
+        font-size:14px;
+        line-height:1.7;
+    }
+}
+
+
+/* Small Tablet */
+@media (max-width:768px){
+    .grooming-section{
+        height:100vh;
+        min-height:600px;
+    }
+
+    .grooming-image{
+        background-attachment:scroll;
+        background-position:center;
+    }
+
+    .grooming-box{
+        height:62%;
+        bottom:-50px;
+        border-radius:50% 50% 0 0 / 12% 12% 0 0;
+    }
+
+    .content{
+        width:90%;
+        padding-top:80px;
+    }
+
+    .content span{
+        font-size:12px;
+        letter-spacing:3px;
+    }
+
+    h1{
+        font-size:48px;
+        line-height:1.05;
+        margin:16px 0;
+    }
+
+    p{
+        width:330px;
+        max-width:100%;
+        font-size:13px;
+        line-height:1.65;
+    }
+}
+
+
+/* Mobile */
+@media (max-width:576px){
+    .grooming-section{
+        height:100svh;
+        min-height:550px;
+    }
+
+    .grooming-image{
+        background-attachment:scroll;
+        background-position:center;
+    }
+
+    .grooming-box{
+        height:60%;
+        bottom:-40px;
+        border-radius:50% 50% 0 0 / 10% 10% 0 0;
+    }
+
+    .content{
+        width:90%;
+        padding-top:65px;
+    }
+
+    .content span{
+        font-size:10px;
+        letter-spacing:2.5px;
+    }
+
+    h1{
+        font-size:40px;
+        line-height:1.05;
+        margin:14px 0;
+    }
+
+    p{
+        width:100%;
+        max-width:300px;
+        font-size:12px;
+        line-height:1.6;
+    }
+}
+
+
+/* Very Small Mobile */
+@media (max-width:400px){
+    .grooming-section{
+        height:100svh;
+        min-height:500px;
+    }
+
+    .grooming-box{
+        height:58%;
+        bottom:-35px;
+        border-radius:50% 50% 0 0 / 8% 8% 0 0;
+    }
+
+    .content{
+        width:90%;
+        padding-top:55px;
+    }
+
+    .content span{
+        font-size:9px;
+        letter-spacing:2px;
+    }
+
+    h1{
+        font-size:34px;
+        line-height:1.05;
+        margin:12px 0;
+    }
+
+    p{
+        max-width:270px;
+        font-size:11px;
+        line-height:1.55;
+    }
+}
+
+
+/* Extra Small Mobile */
+@media (max-width:320px){
+    .grooming-section{
+        min-height:480px;
+    }
+
+    .grooming-box{
+        height:56%;
+        bottom:-30px;
+    }
+
+    .content{
+        width:92%;
+        padding-top:45px;
+    }
+
+    .content span{
+        font-size:8px;
+        letter-spacing:1.8px;
+    }
+
+    h1{
+        font-size:29px;
+        margin:10px 0;
+    }
+
+    p{
+        max-width:240px;
+        font-size:10px;
+        line-height:1.5;
+    }
+}

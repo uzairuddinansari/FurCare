@@ -1,0 +1,527 @@
+.vet-picture-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 105px 5vw 45px;
+  background: #2b555b;
+  color: #193c41;
+}
+
+.vet-picture-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.vet-picture-bg-image {
+  position: absolute;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.12);
+  will-change: opacity, transform;
+}
+
+.vet-picture-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(17, 52, 57, 0.91) 0%,
+      rgba(29, 69, 74, 0.75) 42%,
+      rgba(43, 85, 91, 0.42) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(10, 32, 35, 0.2),
+      rgba(10, 32, 35, 0.55)
+    );
+}
+
+.vet-picture-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -150px;
+  top: 12%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(203, 225, 220, 0.13),
+      transparent 70%
+    );
+  pointer-events: none;
+}
+
+.vet-picture-content {
+  position: relative;
+  z-index: 5;
+  width: min(1400px, 100%);
+  min-height: calc(100vh - 150px);
+  margin: auto;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(300px, 0.72fr);
+  align-items: center;
+  gap: clamp(45px, 7vw, 110px);
+}
+
+.vet-picture-form-area {
+  width: 100%;
+}
+
+.vet-picture-card {
+  width: 100%;
+  padding: clamp(30px, 4vw, 55px);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 26px;
+  box-shadow:
+    0 35px 90px rgba(7, 30, 34, 0.32),
+    0 10px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  will-change: transform;
+}
+
+.vet-picture-header {
+  margin-bottom: 32px;
+}
+
+.vet-picture-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #2b555b;
+  font-family: "1st" peridot-pe-variable, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.vet-picture-eyebrow i {
+  width: 24px;
+  height: 1px;
+  background: #2b555b;
+}
+
+.vet-picture-title {
+  margin: 16px 0 0;
+  color: #165d66;
+  font-family: "1st", Blacker Sens Light, serif;
+  font-size: clamp(38px, 4vw, 60px);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+}
+
+.vet-picture-title em {
+  color: #2b555b;
+  font-family: Sentient-Light, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.vet-picture-description {
+  max-width: 510px;
+  margin: 20px 0 0;
+  color: #718487;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.vet-picture-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px 16px;
+}
+
+.vet-picture-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.vet-picture-field:nth-child(3),
+.vet-picture-upload-field {
+  grid-column: 1 / -1;
+}
+
+.vet-picture-field label {
+  margin-bottom: 8px;
+  color: #193c41;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.vet-picture-field input[type="text"],
+.vet-picture-field input[type="number"],
+.vet-picture-field select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  border: 1px solid rgba(43, 85, 91, 0.2);
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.38);
+  color: #193c41;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 13px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.vet-picture-field input::placeholder {
+  color: #89999b;
+}
+
+.vet-picture-field input:focus,
+.vet-picture-field select:focus {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: #2b555b;
+  box-shadow:
+    0 0 0 4px rgba(43, 85, 91, 0.08);
+}
+
+.vet-picture-field select {
+  cursor: pointer;
+  appearance: none;
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #2b555b 50%
+    ),
+    linear-gradient(
+      135deg,
+      #2b555b 50%,
+      transparent 50%
+    );
+  background-position:
+    calc(100% - 18px) 21px,
+    calc(100% - 13px) 21px;
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
+
+.vet-picture-upload {
+  position: relative;
+  width: 100%;
+  min-height: 76px;
+  border: 1px dashed rgba(43, 85, 91, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.28);
+  overflow: hidden;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.vet-picture-upload:hover {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: #2b555b;
+}
+
+.vet-picture-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.vet-picture-upload-content {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 15px;
+}
+
+.vet-picture-upload-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #2b555b;
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.vet-picture-upload-content strong {
+  display: block;
+  color: #193c41;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.vet-picture-upload-content small {
+  display: block;
+  margin-top: 3px;
+  color: #718487;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 9px;
+}
+
+.vet-picture-selected {
+  display: block;
+  margin-top: 5px;
+  color: #2b555b;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.vet-picture-error {
+  margin-top: 5px;
+  color: #c75d5d;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.vet-picture-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 7px;
+}
+
+.vet-picture-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2b555b;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.vet-picture-step div {
+  width: 55px;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      #2b555b 50%,
+      rgba(255, 255, 255, 0.45) 50%
+    );
+}
+
+.vet-picture-step span:last-child {
+  color: rgba(43, 85, 91, 0.45);
+}
+
+.vet-picture-submit {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  min-height: 47px;
+  padding: 5px 6px 5px 20px;
+  border: none;
+  border-radius: 100px;
+  background: #2b555b;
+  color: white;
+  cursor: pointer;
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.vet-picture-submit b {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 17px;
+  font-weight: 400;
+  transition: transform 0.4s ease;
+}
+
+.vet-picture-submit:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 30px rgba(43, 85, 91, 0.35);
+}
+
+.vet-picture-submit:hover b {
+  transform: rotate(45deg);
+}
+
+.vet-picture-side {
+  max-width: 520px;
+  color: white;
+  padding-right: 20px;
+}
+
+.vet-picture-side-eyebrow {
+  display: block;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.vet-picture-side h2 {
+  margin: 0;
+  font-family: "1st", "Blacker Sens Light", serif;
+  font-size: clamp(45px, 5vw, 76px);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.vet-picture-side h2 em {
+  color: #c9ddda;
+  font-family: Sentient-Light, serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.vet-picture-side p {
+  max-width: 410px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.vet-picture-line {
+  width: 80px;
+  height: 1px;
+  margin-top: 35px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.vet-picture-count {
+  display: block;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: peridot-pe-variable, Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+@media (max-width: 1050px) {
+  .vet-picture-content {
+    grid-template-columns: 1fr 0.75fr;
+    gap: 45px;
+  }
+
+  .vet-picture-card {
+    padding: 32px 28px;
+  }
+
+  .vet-picture-side h2 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 800px) {
+  .vet-picture-page {
+    padding: 95px 18px 30px;
+  }
+
+  .vet-picture-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 45px;
+  }
+
+  .vet-picture-form {
+    grid-template-columns: 1fr;
+  }
+
+  .vet-picture-field:nth-child(3),
+  .vet-picture-upload-field,
+  .vet-picture-bottom {
+    grid-column: auto;
+  }
+
+  .vet-picture-side {
+    max-width: 600px;
+    padding: 0 10px 30px;
+  }
+
+  .vet-picture-side h2 {
+    font-size: clamp(45px, 11vw, 65px);
+  }
+
+  .vet-picture-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 60, 65, 0.85),
+        rgba(25, 67, 72, 0.72)
+      );
+  }
+}
+
+@media (max-width: 480px) {
+  .vet-picture-page {
+    padding: 85px 10px 20px;
+  }
+
+  .vet-picture-card {
+    padding: 27px 19px;
+    border-radius: 20px;
+  }
+
+  .vet-picture-title {
+    font-size: 39px;
+  }
+
+  .vet-picture-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .vet-picture-submit {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .vet-picture-side {
+    padding: 0 10px 20px;
+  }
+
+  .vet-picture-side h2 {
+    font-size: 43px;
+  }
+
+  .vet-picture-side p {
+    font-size: 12px;
+  }
+}

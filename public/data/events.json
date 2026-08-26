@@ -1,0 +1,119 @@
+{
+  "navigation": {
+    "brand": "FurEver Care",
+    "tagline": "THEY DESERVE FOREVER LOVE",
+    "links": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Adoptable Pets",
+        "url": "/adoptable-pets"
+      },
+      {
+        "label": "Appointments",
+        "url": "/appointments"
+      },
+      {
+        "label": "Medical Care",
+        "url": "/medical-care"
+      },
+      {
+        "label": "Events",
+        "url": "/events",
+        "active": true
+      }
+    ],
+    "button": {
+      "label": "Get in touch",
+      "url": "/contact"
+    }
+  },
+  "intro": {
+    "eyebrow": "FUREVER CARE / EVENTS",
+    "title": "Moments that bring<br><em>good people</em> together.",
+    "description": "Discover thoughtful gatherings created for pets, families and everyone who believes that every animal deserves a life filled with care."
+  },
+  "featured": {
+    "number": "01",
+    "category": "COMMUNITY DAY",
+    "month": "SEP",
+    "date": "14",
+    "title": "A day for every<br><em>forever friend.</em>",
+    "description": "Spend a meaningful afternoon with our care team, meet wonderful adoptable companions and become part of a community built around kindness.",
+    "time": "11:00 AM — 05:00 PM",
+    "location": "FurEver Care Shelter, Karachi",
+    "image": "/images/events/community-day.jpg",
+    "button": "Event details"
+  },
+  "events": [
+    {
+      "id": 1,
+      "number": "02",
+      "category": "WELLNESS",
+      "month": "SEP",
+      "date": "21",
+      "title": "Pet Wellness Morning",
+      "description": "A calm morning focused on preventive care, nutrition, grooming and the little habits that keep pets happy.",
+      "time": "10:00 AM — 01:00 PM",
+      "location": "FurEver Care Clinic",
+      "image": "/images/events/wellness.jpg"
+    },
+    {
+      "id": 2,
+      "number": "03",
+      "category": "ADOPTION",
+      "month": "SEP",
+      "date": "28",
+      "title": "Find Your Forever Match",
+      "description": "Meet gentle rescue companions and discover the personality that could become part of your family.",
+      "time": "12:00 PM — 04:00 PM",
+      "location": "Blue Area, Islamabad",
+      "image": "/images/events/adoption.jpg"
+    },
+    {
+      "id": 3,
+      "number": "04",
+      "category": "WORKSHOP",
+      "month": "OCT",
+      "date": "05",
+      "title": "Understanding Your Pet",
+      "description": "Learn how pets communicate through behaviour and discover simple ways to build a stronger everyday bond.",
+      "time": "03:00 PM — 05:00 PM",
+      "location": "FurEver Care Studio",
+      "image": "/images/events/workshop.jpg"
+    },
+    {
+      "id": 4,
+      "number": "05",
+      "category": "RESCUE",
+      "month": "OCT",
+      "date": "12",
+      "title": "Rescue & Care Drive",
+      "description": "Join our community in collecting essential supplies and supporting animals waiting for a safe and loving home.",
+      "time": "09:00 AM — 02:00 PM",
+      "location": "G-9 Community Hall",
+      "image": "/images/events/rescue.jpg"
+    }
+  ],
+  "community": {
+    "eyebrow": "THE FUREVER COMMUNITY",
+    "title": "More than events.<br><em>Real connections.</em>",
+    "description": "Every gathering is designed to create meaningful moments between people and the animals they care about.",
+    "stats": [
+      {
+        "number": "24",
+        "label": "COMMUNITY EVENTS"
+      },
+      {
+        "number": "180+",
+        "label": "PET FAMILIES"
+      },
+      {
+        "number": "96",
+        "label": "FOREVER MATCHES"
+      }
+    ]
+  }
+}
