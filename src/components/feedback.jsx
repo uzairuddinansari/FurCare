@@ -499,7 +499,7 @@ function Feedback() {
                   understand your needs better.
                 </p>
               </div>
-
+               {/* 2nd card */}
               <div className="feedback-info-card">
                 <div className="feedback-info-card-icon">
                   ☆
@@ -514,6 +514,37 @@ function Feedback() {
                   our services every day.
                 </p>
               </div>
+              {/* 3rd card  */}
+              <div className="feedback-info-card">
+  <div className="feedback-info-card-icon">
+    ✓
+  </div>
+
+  <h3 className="feedback-info-card-title">
+    We Listen
+  </h3>
+
+  <p className="feedback-info-card-description">
+    Your valuable feedback helps us
+    understand what matters to you.
+  </p>
+              </div>
+               {/* 4th card */}
+              <div className="feedback-info-card">
+  <div className="feedback-info-card-icon">
+    ♡
+  </div>
+
+  <h3 className="feedback-info-card-title">
+    We Care
+  </h3>
+
+  <p className="feedback-info-card-description">
+    Your experience matters to us,
+    and we are always here to improve.
+  </p>
+              </div>
+
             </div>
           </div>
         </section>

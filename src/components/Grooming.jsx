@@ -35,14 +35,9 @@ const Grooming = () => {
 
           <p>
             Professional grooming that keeps your pet clean,
-            healthy and feeling their best. From baths to
-            styling, we handle every detail with tenderness.
+            healthy and feeling their best.
           </p>
-
-
-      
-
-
+          
         </div>
 
 

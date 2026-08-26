@@ -16,6 +16,7 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PageToast from "./components/Toaster";
+import Checkout from "./components/Checkout";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,30 +93,13 @@ const App = () => {
         <Route path="/" element={<Main_login />} />
         <Route path="/Petowner" element={<Petowner />} />
         <Route path="/Veterinarian" element={<Veterinarian />} />
-        <Route
-          path="/Veterinarian/page"
-          element={<Veterinarian_page />}
-        />
-        <Route
-          path="/Animal_Shelter"
-          element={<Animal_Shelter />}
-        />
-        <Route
-          path="/Pet_owner_home"
-          element={<Pet_owner_page />}
-        />
-        <Route
-          path="/Pet_owner_feedback"
-          element={<Feedback />}
-        />
-        <Route
-          path="/Pet_owner_products"
-          element={<Product />}
-        />
-        <Route
-          path="/Pet_owner_health"
-          element={<Healt />}
-        />
+        <Route path="/Veterinarian/page" element={<Veterinarian_page />}/>
+        <Route path="/Animal_Shelter" element={<Animal_Shelter />}/>
+        <Route path="/Pet_owner_home" element={<Pet_owner_page />}/>
+        <Route path="/Pet_owner_feedback" element={<Feedback />}/>
+        <Route path="/Pet_owner_products" element={<Product />} />
+        <Route path="/Pet_owner_health" element={<Healt />}/>
+        <Route path="/Pet_owner_Checkout" element={<Checkout />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
