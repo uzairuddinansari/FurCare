@@ -2,7 +2,9 @@ import logo from "../assets/nav/logo.jpeg";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
-  const name = localStorage.getItem("userName");
+   const savedUser = localStorage.getItem("currentUser");
+  const currentUser = savedUser ? JSON.parse(savedUser) : null;
+  const name = currentUser?.name || "";
 
   return (
     <div className="nav-parrent">
