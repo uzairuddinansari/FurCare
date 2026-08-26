@@ -2,6 +2,9 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 
+import PetChatbot from "./Chatbot";
+import VoiceAssistant from "./voiceassistant";
+
 const Main_login = () => {
   const [userName, setUserName] = useState("");
   const [userRole, setUserRole] = useState("");
@@ -140,6 +143,9 @@ const Main_login = () => {
   };
 
   return (
+    <>
+    <VoiceAssistant />
+    <PetChatbot />
     <main className="login-page" ref={pageRef}>
       {/* Decorative elements */}
       <div className="login-orb one"></div>
@@ -319,6 +325,7 @@ const Main_login = () => {
         <span>MORE FROM FurEverCare</span>
       </section>
     </main>
+    </>
   );
 };
 

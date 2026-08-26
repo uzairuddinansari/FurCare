@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./product.css";
 import Nav2 from "./Nav2";
 
+import PetChatbot from "./Chatbot";
+
 const CATEGORIES = [
   "All Products",
   "Cat & Dog Food",
@@ -331,7 +333,7 @@ export default function Product() {
   return (
     <>
       <Nav2 />
-
+    <PetChatbot />
       <div className="pawora-page">
         <main id="top">
           <section className="hero">

@@ -5,6 +5,7 @@ import "../style/form_petowner.css";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import Nav from "./Nav";
+import PetChatbot from "./Chatbot";
 
 const Petowner = () => {
   const navigate = useNavigate();
@@ -280,7 +281,7 @@ const Petowner = () => {
   return (
     <>
       <Nav />
-
+      <PetChatbot />
       <main
         className="pet-owner-page"
         ref={pageRef}

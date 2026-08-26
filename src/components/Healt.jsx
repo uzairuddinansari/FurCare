@@ -1,4 +1,5 @@
 import "../style/healt&Tips.css";
+import PetChatbot from "./Chatbot";
 import Nav2 from "./Nav2";
 
 const habits = [
@@ -44,6 +45,8 @@ const calendar = [
 function Healt() {
   return (
     <main className="page">
+
+    <PetChatbot />
      <Nav2 />
       <section className="htHero">
   <div className="htHeroInner">

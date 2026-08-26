@@ -160,7 +160,7 @@ const Pet_owner_home = () => {
   return (
     <>
       <Nav2 />
-
+      
       <main
         className="pet-home-page"
         ref={pageRef}

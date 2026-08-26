@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import "../style/form_veterinanian.css";
 import Nav from "./Nav";
+import PetChatbot from "./Chatbot";
+
 // import Nav from "./Nav2";
 const Picturedata = () => {
   const navigate = useNavigate();
@@ -326,8 +328,10 @@ const Picturedata = () => {
   return (
     <>
       <Nav />
-
+       
       <main className="vet-picture-page" ref={pageRef}>
+
+        <PetChatbot />
         <div className="vet-picture-background">
           {backgroundImages.map((image, index) => (
             <div

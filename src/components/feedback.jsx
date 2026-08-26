@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../style/feedback.css";
 import Nav2 from "./Nav2";
+import PetChatbot from "./Chatbot";
 
 const feedbackPets = {
   dog: "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=90",
@@ -108,6 +109,8 @@ function Feedback() {
 
   return (
     <>
+
+    <PetChatbot />
       <Nav2 />
 
       <main className="feedback-page">
