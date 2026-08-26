@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 @font-face {
   font-family: "1st";
@@ -11,18 +7,32 @@
   font-display: swap;
 }
 
-html,
-body,
-#root {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   width: 100%;
   min-height: 100%;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  min-height: 100%;
   font-family: "1st", peridot-pe-variable;
   background: #f7f5ef;
+   scrollbar-width: none;
   overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: clip;
 }
 
 button,

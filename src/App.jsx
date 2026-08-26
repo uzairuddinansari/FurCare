@@ -26,12 +26,25 @@ const App = () => {
   });
 
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 850px)").matches;
+
+    if (isMobile) {
+      document.documentElement.classList.add("mobile-native-scroll");
+      document.body.classList.add("mobile-native-scroll");
+
+      return () => {
+        document.documentElement.classList.remove("mobile-native-scroll");
+        document.body.classList.remove("mobile-native-scroll");
+      };
+    }
+
     const lenis = new Lenis({
-      duration: 1.5,
+      duration: 1.15,
       smoothWheel: true,
       smoothTouch: false,
-      wheelMultiplier: 0.9,
+      wheelMultiplier: 0.85,
       touchMultiplier: 1,
+      syncTouch: false
     });
 
     lenisRef.current = lenis;
@@ -59,7 +72,10 @@ const App = () => {
     setLoading(false);
 
     requestAnimationFrame(() => {
-      lenisRef.current?.start();
+      if (lenisRef.current) {
+        lenisRef.current.start();
+      }
+
       ScrollTrigger.refresh();
     });
   };
@@ -74,12 +90,30 @@ const App = () => {
         <Route path="/" element={<Main_login />} />
         <Route path="/Petowner" element={<Petowner />} />
         <Route path="/Veterinarian" element={<Veterinarian />} />
-        <Route path="/Veterinarian/page" element={<Veterinarian_page />} />
-        <Route path="/Animal_Shelter" element={<Animal_Shelter />} />
-        <Route path="/Pet_owner_home" element={<Pet_owner_page />} />
-        <Route path="/Pet_owner_feedback" element={<Feedback />} />
-        <Route path="/Pet_owner_products" element={<Product />} />
-        <Route path="/Pet_owner_health" element={<Healt />} />
+        <Route
+          path="/Veterinarian/page"
+          element={<Veterinarian_page />}
+        />
+        <Route
+          path="/Animal_Shelter"
+          element={<Animal_Shelter />}
+        />
+        <Route
+          path="/Pet_owner_home"
+          element={<Pet_owner_page />}
+        />
+        <Route
+          path="/Pet_owner_feedback"
+          element={<Feedback />}
+        />
+        <Route
+          path="/Pet_owner_products"
+          element={<Product />}
+        />
+        <Route
+          path="/Pet_owner_health"
+          element={<Healt />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
