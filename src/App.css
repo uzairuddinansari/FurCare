@@ -16,12 +16,13 @@ body,
 #root {
   width: 100%;
   min-height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
   font-family: "1st", peridot-pe-variable;
   background: #f7f5ef;
+  overflow-x: hidden;
 }
 
 button,
@@ -34,7 +35,7 @@ input {
   width: 100%;
   min-height: 100vh;
   background-image: url(../src/assets/nav/logo.jpeg);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   background:
     radial-gradient(
@@ -606,6 +607,7 @@ input {
 @media (max-width: 850px) {
   .login-page {
     overflow: visible;
+  
   }
 
   .login-hero {
