@@ -573,7 +573,7 @@ padding: 10px 50px;
   font-size: 9px;
 }
 
-/* ================= TRUST ================= */
+
 
 .trust-bar {
   width: min(1080px, calc(100% - 48px));
@@ -620,7 +620,6 @@ padding: 10px 50px;
   font-size: 16px;
 }
 
-/* ================= SHOP ================= */
 
 .shop-section {
   width: min(1240px, calc(100% - 48px));
@@ -680,7 +679,6 @@ padding: 10px 50px;
   font-weight: 700;
 }
 
-/* ================= CONTROLS ================= */
 
 .controls {
   display: grid;
@@ -760,8 +758,6 @@ padding: 10px 50px;
   cursor: pointer;
 }
 
-/* ================= CATEGORIES ================= */
-
 .category-tabs {
   display: flex;
   gap: 8px;
@@ -826,8 +822,6 @@ padding: 10px 50px;
     0 10px 25px rgba(43, 85, 91, 0.16);
 }
 
-/* ================= PRODUCT GRID ================= */
-
 .product-grid {
   display: grid;
 
@@ -837,7 +831,6 @@ padding: 10px 50px;
   gap: 23px;
 }
 
-/* ================= CARD ================= */
 
 .product-card {
   position: relative;
@@ -892,7 +885,6 @@ padding: 10px 50px;
   }
 }
 
-/* ================= IMAGE ================= */
 
 .product-image-wrap {
   position: relative;
@@ -1002,7 +994,6 @@ padding: 10px 50px;
     rgba(255, 245, 246, 0.95);
 }
 
-/* ================= INFO ================= */
 
 .product-info {
   padding: 12px 20px 21px;
@@ -1100,7 +1091,6 @@ padding: 10px 50px;
   transform: translateX(3px);
 }
 
-/* ================= LOADER ================= */
 
 .loader-container {
   min-height: 320px;
@@ -1139,7 +1129,6 @@ padding: 10px 50px;
   }
 }
 
-/* ================= EMPTY ================= */
 
 .empty-state {
   padding: 90px 20px;

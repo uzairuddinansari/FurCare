@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
 
-/* =========================================================
-   ROOT
-========================================================= */
+
 
 :root {
   --main: #2b555b;
@@ -15,14 +13,7 @@
   --white: #ffffff;
   --line: rgba(23, 63, 69, 0.14);
 
-  /*
-    Heading:
-    1st / Blacker Sens Lighter
-
-    Body:
-    Peridot PE Variable
-  */
-  --heading-font:"1st" Blacker Sens Lighter, , ;
+  --heading-font:"1st" Blacker Sens Lighter,  ;
   --body-font: '1st' peridot-pe-variable;
 }
 
@@ -82,7 +73,7 @@
 }
 
 
-/* ---------- hero text ---------- */
+
 
 .hero-content {
   position: relative;
@@ -223,7 +214,7 @@
 }
 
 
-/* ---------- dog ---------- */
+
 
 .dog-image {
   width: 245px;
@@ -240,7 +231,6 @@
 }
 
 
-/* ---------- cat ---------- */
 
 .cat-image {
   width: 154px;
@@ -257,7 +247,7 @@
 }
 
 
-/* ---------- hero label ---------- */
+
 
 .hero-label {
   position: absolute;
@@ -286,7 +276,6 @@
 }
 
 
-/* ---------- decorations ---------- */
 
 .hero-paw {
   position: absolute;
@@ -656,7 +645,6 @@
 }
 
 
-/* ---------- doctor image ---------- */
 
 .doctor-image {
   width: 100%;
@@ -763,8 +751,6 @@
 }
 
 
-/* ---------- timeline ---------- */
-
 .timeline {
   width: 100%;
   margin-top: 52px;
@@ -839,7 +825,6 @@
 }
 
 
-/* ---------- vet card ---------- */
 
 .vet-card {
   min-height: 300px;
@@ -986,7 +971,7 @@
 }
 
 
-/* ---------- bottom title ---------- */
+
 
 .bottom-title {
   padding-right: 38px;
@@ -1016,7 +1001,7 @@
 }
 
 
-/* ---------- bottom text ---------- */
+
 
 .bottom-text p {
   margin: 0;

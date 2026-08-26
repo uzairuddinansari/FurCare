@@ -15,6 +15,7 @@ import { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import PageToast from "./components/Toaster";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +86,8 @@ const App = () => {
       {loading && (
         <FurCareLoader onComplete={handleLoaderComplete} />
       )}
-
+     
+     <PageToast />
       <Routes>
         <Route path="/" element={<Main_login />} />
         <Route path="/Petowner" element={<Petowner />} />

@@ -5,6 +5,7 @@ import Grooming from './Grooming';
 import Footer from './Footer';
 import Contact from './contact';
 import LiveLocation from './livelocation';
+import PetChatbot from './Chatbot';
 
 
 const Pet_owner_page = () => {
@@ -22,6 +23,7 @@ const Pet_owner_page = () => {
   
   return (
     <>
+    <PetChatbot />
     <LiveLocation />
     <Nav2 />
     <PetProfile />

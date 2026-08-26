@@ -185,12 +185,10 @@
   font-size: 11px;
   font-weight: 700;
 
-  font-family: "1st", Arial, sans-serif;
+    font-family: "1st", peridot-pe-variable;
 }
 
-/* ================================
-   INPUTS
-================================ */
+
 
 .pet-field input,
 .pet-field select,
@@ -248,9 +246,6 @@
     0 0 0 4px rgba(43, 85, 91, 0.08);
 }
 
-/* ================================
-   SELECT
-================================ */
 
 .pet-field select {
   cursor: pointer;
@@ -280,9 +275,6 @@
   background-repeat: no-repeat;
 }
 
-/* ================================
-   ERROR
-================================ */
 
 .pet-error-message {
   margin-top: 5px;
@@ -293,9 +285,6 @@
   font-weight: 600;
 }
 
-/* ================================
-   FORM BOTTOM
-================================ */
 
 .pet-form-bottom {
   display: flex;

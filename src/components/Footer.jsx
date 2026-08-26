@@ -41,7 +41,6 @@ function Footer() {
 
       <div className="footer-main">
 
-        {/* BRAND COLUMN */}
         <div className="footer-brand">
 
           <div className="brand-box">
@@ -90,14 +89,14 @@ function Footer() {
             <div className="contact-icon">☎</div>
 
             <div>
-              <strong>+1 800 123 456 789</strong>
+              <strong>+92 123 456 789</strong>
               <span>24/7 Customer Call Support</span>
             </div>
           </div>
 
           <div className="address">
             <small>OUR ADDRESS</small>
-            <p>82 Riverside Street, New York, NY 10012</p>
+            <p>82 Riverside Street,Pakistan Karachi</p>
           </div>
 
           {/* SOCIAL ICONS */}
@@ -193,7 +192,7 @@ function Footer() {
       </div>
 
 
-      {/* ================= BACK TO TOP ================= */}
+
       <button
         className="back-to-top"
         onClick={scrollToTop}
