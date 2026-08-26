@@ -7,7 +7,7 @@ import Veterinarian_page from "./components/Veterinarian_page";
 import "./App.css";
 import Pet_owner_page from "./components/pet_owner_page";
 import Feedback from "./components/feedback";
-import Product from "./components/product";
+import Product from "./components/Product";
 import Healt from "./components/Healt";
 import NotFound from "./components/NotFound";
 import FurCareLoader from "./components/FurcareLoader";
