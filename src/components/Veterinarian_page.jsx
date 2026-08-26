@@ -8,6 +8,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import EmergencyDirectory from "./EmergencyDirectory";
 import LiveLocation from "./livelocation";
+import PetChatbot from "./Chatbot";
 
 const DisplayUsers = () => {
   const [users, setUsers] = useState([]);
@@ -58,6 +59,7 @@ const DisplayUsers = () => {
 
   return (
     <>
+    <PetChatbot />
     <LiveLocation />
     <Nav/>
     <main className="veterinarian-page">
